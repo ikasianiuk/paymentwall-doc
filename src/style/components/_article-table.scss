@@ -1,0 +1,132 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the article-table component.
+// -----------------------------------------------------------------------------
+
+.article-content {
+  
+  .table-wrapper{
+    
+    padding-top: 20px;
+    
+    @include smaller-than (mobile-landscape){
+      overflow: scroll;
+    }
+  }
+  
+  table{
+    width: 100%;
+    table-layout: fixed;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 16px 13px 3px 13px;
+    color: #000;
+    line-height: 1.5;
+
+    @include between(mobile, mobile-landscape){
+      width: 480px;
+    }
+    
+    thead {
+      @include smaller-than(mobile-landscape){
+        border-top: 1px solid #c0c0c0;
+      }
+    }
+    
+    tr td:first-child,
+    tr th:first-child{
+      @include smaller-than(mobile-landscape){
+        border-right: 1px solid #ebf1f3;
+        box-shadow: 0px 3px 18px 0px rgba(72, 72, 72, 0.14);
+        box-shadow: inset -25px 0px 25px -25px rgba(72, 72, 72, 0.14);
+      }
+    }
+
+    thead tr,
+    tbody tr {
+      display: flex;
+    }
+
+    tr{
+      color: #000;
+//      padding: 15px 15px 15px 10px;
+    }
+
+    th, td{
+      flex-basis: 20%;  
+      word-break: break-word;
+      display: inline-block;
+      width: 20%;
+      padding: 15px 15px 15px 10px;
+
+      .long-word{
+        display: inline-block;
+        word-break: break-all;
+      }
+    }
+    th:last-child,
+    td:last-child{
+      flex-basis: 40%;
+    } 
+
+    code{
+      font-family: $code-font-stack;
+      color:  #f92672;
+      line-height: 22px;
+      background: #f6f6f6;
+      padding: 3px;
+      line-height: 1;
+    } 
+    
+  }
+}
+
+.stored-widget-call__result table{
+  margin-top: 57px;
+  
+  @include between(mobile, desktop){
+    width: auto;
+  }
+    
+  tr{
+    border: none;
+    padding: 15px 0;
+  }
+  
+  th, td{
+    flex-basis: 40%;  
+    word-break: break-word;    
+  }
+  
+  td:last-child,th:last-child{
+    flex-basis: 60%;
+  } 
+  
+  tr td:first-child {
+    
+    border-right: none;
+    box-shadow: none;
+    
+    em, strong{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+  }
+    
+    em{
+      color:  #f46228;
+    }
+
+    strong{
+      color:  #9fa4a6;
+    }
+  }
+}
+
+.nicescroll-cursors{
+      
+  @include larger-than(mobile-landscape){
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="41px" height="18px" viewBox="0 0 41 18">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 26px;
+  font-family: "ProximaNova-Regular";
+  fill: rgb(254,192,19);
+  text-transform: uppercase;
+}
+]]></style>
+<g><text transform="translate(-0.08,18.05)" class="style0"><tspan x="0.00 17.86 33.64" fill="rgb(253,191,18)">API</tspan></text></g></svg>

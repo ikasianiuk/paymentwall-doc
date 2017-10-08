@@ -1,0 +1,40 @@
+.prettyprint{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  word-break: break-word;
+  white-space: pre-wrap;  
+  
+  .kwd{
+    color:  #c678dd;
+  }
+  
+  .pun,
+  .typ:first-child{
+    color: #fff;
+  }
+  
+  .typ{ 
+    color: #ed616c;
+  }
+  .vars{
+    color: #fff;
+  }
+  .pln{
+    color: #44a9fe;
+  }
+  .str{
+    color: #a3e765;
+  }
+  .mt{
+    color: #ef9f45;
+  }
+  
+  pre{
+  
+    @include smaller-than(mobile-landscape){
+      white-space: pre-line;
+    }
+  }
+}

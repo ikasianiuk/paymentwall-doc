@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the code-section of the site.
+// -----------------------------------------------------------------------------
+.code-section{
+  flex-basis: 49.25%;
+  max-width: 49.25%;
+  background-color: $dark-bg;
+  
+  @include between (mobile, desktop){
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  &__content{
+    padding: 63px 34px 34px;
+    
+    @include between (mobile, desktop){
+      padding: 20px;
+    }
+  }
+}
+
+.code-section__content{
+  
+  h6{
+    color: #fff;
+    font-size: 16px; 
+    font-weight: 700;
+    line-height: 1.875; 
+    padding-top: 37px;
+  }
+  p{
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+  .url{
+    display: inline-block;
+    word-break: break-all;
+    }
+  
+  pre:last-of-type{
+    margin-bottom: 48px;
+    }
+  pre.prettyprint{
+    border: none;
+    background-color: #282c34;
+    margin-top: 23px;
+    border-radius: 2px;
+    padding: 10px;
+    }
+}
+
+.code-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  
+  @include between (mobile, desktop){
+    top: $header-height;
+  }
+  
+  
+  &.fixed{
+    position: fixed;
+    z-index: 2;
+  }
+  
+  li{
+    border-bottom: 3px solid transparent;
+    transition: all .3s ease;
+    padding: 15px 5px;
+    flex-basis: 25%;
+    text-align: center;
+  }
+  
+  li.active{
+    border-bottom: 3px solid $tabs-active-color;
+    
+     a{
+      color: $tabs-active-color;
+    }
+  }
+
+  li a{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    
+    &:hover, &:focus{
+      color: #fec013;
+      text-decoration: none;
+    }
+  }
+}
+
+  .code-tabs.active{
+    display: block;
+  }
+
+ .code-tabs{
+    display: none;
+  }

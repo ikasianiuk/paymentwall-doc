@@ -1,0 +1,65 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main layout on the page.
+// -----------------------------------------------------------------------------
+
+.page-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: $header-height;
+}
+
+.main-wrapper{
+  flex-basis: 80.4%;
+  max-width: 80.4%;
+  
+  @include between (mobile, desktop){
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 60px;
+  }
+}
+
+.main-content{
+  flex-basis: 50.75%;
+  max-width: 50.75%;
+  background-color: $main-bg;
+  padding: .5em 1.5em;
+  
+  @include between (mobile, desktop){
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: .5em 1em;
+  }
+}
+.article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-content{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  
+  h1{
+    font-size: 3.25em;
+    font-weight: 100;
+    letter-spacing: -1px;
+    margin-left: -4px;
+  }
+  h3, h5{
+    font-size: 1.375em;
+    margin-top: 28px;
+  }
+  h3{
+    font-weight: 700;
+  }
+  h5{
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+}
+
+

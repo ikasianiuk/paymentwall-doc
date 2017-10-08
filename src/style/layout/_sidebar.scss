@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar of the site.
+// -----------------------------------------------------------------------------
+
+.page-main{
+  display: flex;
+}
+
+.sidebar{
+  flex-basis: 19.6%;
+  max-width: 19.6%;
+  padding: 34px 20px 36px 40px;
+  background-color: #f9fcfd;
+  
+  @include between (mobile, desktop){
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  &__nav h6 {
+    color: #7a8387;
+    font-size: 12px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.6px;
+    padding-top: 46px;
+  }
+  
+  &__nav-section{
+    
+    li.active > a{
+    color: $link-color;
+  }
+  
+    a{
+      color: #474747;
+      font-size: 16px; 
+      font-weight: 400;
+      line-height: 1.9;
+      text-align: left;
+    
+      &:hover,
+      &:focus{
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+    
+    @include between(mobile, desktop) {
+      padding-top: $header-height;
+    }
+  }
+}
+  
+.nav-section__subsection{
+  display: none;
+  margin-left: 2.1em;
+  
+  li:first-child{
+    position: relative;
+}
+  li:first-child:before {
+    content: "";
+    border: solid #cecece;
+    border-width: 0px 0px 2px 2px;
+    padding: 4px;
+    position: absolute;
+    left: -11%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+//.nav-section__title.active + .nav-section__subsection{
+//  display: block;
+//}
+//
+//.nav-section__subsection{
+////  margin-left: 50px;
+//}

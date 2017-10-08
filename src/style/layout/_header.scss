@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site.
+// -----------------------------------------------------------------------------
+
+.page-header{
+  width: 100%;
+  font-size: 13px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  position: fixed;
+  z-index: 2;
+  
+  &--dark{
+    background-color: $dark-bg;
+  }
+  
+  &__logo{
+    display: inline-block;
+    
+    a img:nth-child(2){
+      
+      @include between (mobile, desktop) {
+        height: 13px;
+        vertical-align: text-top;
+      }
+    }
+  }
+  
+  img{
+    vertical-align: middle;
+    margin-left: 5px;
+    
+    @include between (mobile, desktop) {
+      max-width: 120px;
+    }
+
+  }
+  
+  &__registration{
+    display: flex;
+    align-items: center;
+    
+     @include between (mobile, desktop) {
+      display: none;
+    }
+  }
+  
+  &__registration a{
+    color: $grey;
+    margin-right: 21px;
+    letter-spacing: 0.5px;
+    
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
